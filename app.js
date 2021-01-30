@@ -19,7 +19,14 @@ app.use( logger('dev') );
 app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded( { extended : false }) );
 // uploads 파일을 정적파일로!
+// 앞이 url + 뒤 폴더이름
 app.use('/uploads' , express.static('uploads'));
+
+// global View Variable 
+app.use((req, res, next)=>{
+    app.locals.isLogin = true;
+    next();
+});
 
 app.get('/', (req, res) => {
     res.send('express start');
