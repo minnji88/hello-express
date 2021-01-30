@@ -8,8 +8,7 @@ router.get('/', (req, res) => {
 router.get('/products', (req, res) => {
     // res.send('admin products');
     res.render('admin/products.html', {
-        message : 'hello!!!',
-        online: 'express'
+
     });
 })
 

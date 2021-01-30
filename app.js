@@ -12,9 +12,8 @@ nunjucks.configure('template', {
     autoescape : true,
     express: app
 });
-// template를 인식하고 사용하겠다
+// template html 위치를 인식하고 사용하겠다
 // autoescape는 보안상 true
-// express : app는 사용할 주체
 
 app.get('/express', (req, res) => {
     res.send('express start');
@@ -23,7 +22,6 @@ app.get('/express', (req, res) => {
 app.use('/admin', admin);
 app.use('/contacts', contacts);
 
-// app.listen: 포트 명과 리스닝이 성공했을 때 실행될 콜백 함수
 app.listen(port, ()=> {
     console.log('Express listening on port', port)
 });
