@@ -18,13 +18,8 @@ nunjucks.configure('template', {
 app.use( logger('dev') );
 app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded( { extended : false }) );
-
-// body-parser 하는 방법
-// app.use((req, res, next)=> {
-//     req.body = {
-
-//     }
-// });
+// uploads 파일을 정적파일로!
+app.use('/uploads' , express.static('uploads'));
 
 app.get('/', (req, res) => {
     res.send('express start');
