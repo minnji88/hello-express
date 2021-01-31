@@ -4,7 +4,7 @@
   "description": "express_practice",
   "main": "index.js",
   "scripts": {
-    "start": "npx nodemon -e js, html app.js"
+    "start": "npx nodemon -e js, html server.js"
   },
   "keywords": [],
   "author": "minji",
